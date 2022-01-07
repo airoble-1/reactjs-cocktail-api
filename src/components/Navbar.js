@@ -1,12 +1,26 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import logo from '../logo.svg'
+import React from "react"
+import { NavLink } from "react-router-dom"
+import logo from "../logo.svg"
 
 const Navbar = () => {
   return (
-    <div>
-      <h2>navbar component</h2>
-    </div>
+    <nav className="navbar">
+      <div className="nav-center">
+        <img src={logo} alt="cocktail db logo" className="logo" />
+        <ul className="nav-links">
+          <li>
+            <NavLink to="/" activeclassname="active">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" activevlassname="active">
+              About
+            </NavLink>
+          </li>
+        </ul>
+      </div>
+    </nav>
   )
 }
 
