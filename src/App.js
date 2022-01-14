@@ -7,18 +7,21 @@ import SingleCocktail from "./pages/SingleCocktail"
 import Error from "./pages/Error"
 // import components
 import Navbar from "./components/Navbar"
+import { AppProvider } from "./context"
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/cocktail/:id" element={<SingleCocktail />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </Router>
+    <AppProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/cocktail/:id" element={<SingleCocktail />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Router>
+    </AppProvider>
   )
 }
 

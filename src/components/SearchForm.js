@@ -3,11 +3,10 @@ import { useGlobalContext } from "../context"
 
 const SearchForm = () => {
   return (
-    <section className="search">
-      <h2 className="section-title">Search Cocktails</h2>
+    <section className="section search">
       <form className="search-form">
         <div className="form-control">
-          <label>Search For Your Favorite Cocktail</label>
+          <label>Search Your Favorite Cocktail</label>
           <input type="text" name="name"></input>
         </div>
       </form>
